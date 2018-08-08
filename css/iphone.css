@@ -1,0 +1,297 @@
+@import url("base.css");
+header{
+    width: 100%;
+    height: 40px;
+    background: #444444;
+}
+header main{
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+}
+header main div{
+    font-size: 11px;
+    color: #a8a8aa;
+}
+nav{
+    width: 100%;
+    height: 45px;
+    background: #333333;
+}
+nav ul{
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li a{
+    font-size: 12px;
+    color: #fff;
+}
+nav ul li a:hover{
+    color: #959595;
+}
+nav ul li a:hover i{
+    color: #959595;
+}
+nav ul li a i{
+    font-size: 18px;
+    color: #fff;
+}
+section ul,section{
+    width: 100%;
+    height: auto;
+}
+section li{
+    width: 100%;
+    background-color: #fafafa;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+section li h1{
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+section li h2{
+    color: #111;
+    font-weight: normal;
+    text-align: center;
+}
+section li .xbg1{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin-left: auto;
+     margin-right: auto;
+ }
+.word{
+    display: block;
+    color: #3f7dca;
+    line-height: 56px;
+    text-align: center;
+}
+.word .left{
+    display: inline-block;
+    padding-right: 28px;
+}
+.word .right{
+    display: inline-block;
+}
+list ul{
+    width: 100%;
+    height: auto;
+}
+list li{
+    float: left;
+    box-sizing: border-box;
+    border-bottom: 12px solid #fff;
+}
+
+list li h1{
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+list li h2,list li h3{
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+
+@media screen and (min-width:1024px){
+    header main{
+        width: 976px;
+    }
+    nav ul{
+        width: 976px;
+    }
+    .max{
+        display: block;
+    }
+    .min{
+        display: none;
+    }
+    section li{
+        height: 692px;
+    }
+    section li h1{
+        font-size: 56px;
+        line-height: 61px;
+        margin: 116px auto 0;
+    }
+    section li h2{
+        font-size: 22px;
+        line-height: 42px;
+    }
+    .word{
+        font-size: 17px;
+        line-height: 45px;
+    }
+    section li .xbg1{
+        width: 1068px;
+        height: 337px;
+        background: url("../img/iphone_x_large.jpg") no-repeat center;
+        background-size:1068px 337px;
+    }
+    section .xbg2{
+        background: url("../img/macbook_pro_performance_large.jpg") no-repeat center;
+        background-size: 100% 100%;
+    }
+    list li{
+        width: 50%;
+        height: 591px;
+        border-left: 12px solid #fff;
+        border-right: 6px solid #fff;
+        background: url("../img/iphone_x_a11_large.jpg" ) no-repeat center;
+    }
+    list li:nth-child(2n){
+        border-left: 6px solid #fff;
+        border-right: 12px solid #fff;
+    }
+    list li h1{
+        font-size: 33px;
+        line-height: 47px;
+        margin: 410px auto 0;
+    }
+    list li h2{
+        font-size: 15px;
+        line-height: 33px;
+    }
+    list li h3{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+}
+@media screen and (max-width:1024px){
+    header main{
+        padding-right: 27px;
+    }
+     nav ul{
+        padding:0 27px;
+    }
+    .max{
+        display: none;
+    }
+    .min{
+        display: block;
+    }
+    section li{
+        height: 650px;
+    }
+    section li h1{
+        font-size: 31px;
+        line-height:51px;
+        margin: 135px auto 0;
+    }
+    section li h2{
+        font-size: 17px;
+        line-height: 35px;
+    }
+    .word{
+        font-size: 16px;
+        line-height: 42px;
+    }
+    section li .xbg1{
+        width: 736px;
+        height: 336px;
+        background: url("../img/iphone_x_medium.jpg") no-repeat center;
+        background-size: 736px 336px;
+    }
+    section .xbg2{
+        background: url("../img/macbook_pro_performance_medium.jpg") no-repeat center;
+        background-size: 100% 100%;
+    }
+    list li{
+        width: 50%;
+        height: 600px;
+        border-left: 12px solid #fff;
+        border-right: 6px solid #fff;
+        background: url("../img/iphone_x_a11_large.jpg" ) no-repeat center;
+    }
+    list li:nth-child(2n){
+        border-left: 6px solid #fff;
+        border-right: 12px solid #fff;
+    }
+    list li h1{
+        font-size: 32px;
+        line-height: 46px;
+        margin: 385px auto 0;
+    }
+    list li h2{
+        font-size: 18px;
+        line-height: 32px;
+    }
+    list li h3{
+        font-size: 23px;
+        line-height: 39px;
+    }
+}
+@media screen and (max-width:768px){
+    .max{
+        display: none;
+    }
+    .min{
+        display: block;
+    }
+    section li{
+        width: 100% ;
+        height: 500px;
+    }
+    section li h1{
+        font-size: 23px;
+        line-height:35px;
+        margin: 29px auto 0;
+    }
+    section li h2{
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .word{
+        font-size: 15px;
+        line-height: 31px;
+    }
+    section li .xbg1{
+        width: 320px;
+        height: 353px;
+        background: url("../img/iphone_x_small.jpg") no-repeat center;
+        background-size: 320px 353px;
+    }
+    section li .xbg2{
+        background: url("../img/macbook_pro_performance_small.jpg") no-repeat center;
+        background-size: 100% 100%;
+    }
+    list li{
+        width: 100%;
+        height: 611px;
+        border-left: none;
+        border-right: none;
+        background: url("../img/iphone_x_a11_large.jpg" ) no-repeat center;
+    }
+    list li:nth-child(2n){
+        border-left: none;
+        border-right: none;
+    }
+    list li h1{
+        font-size: 32px;
+        line-height: 46px;
+        margin: 434px auto 0;
+    }
+    list li h2{
+        font-size: 18px;
+        line-height: 32px;
+    }
+    list li h3{
+        font-size: 22px;
+        line-height: 38px;
+    }
+}
