@@ -1,4 +1,10 @@
 @import url("base.css");
+.icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+}
 header{
     width: 100%;
     height: 40px;
@@ -47,13 +53,16 @@ section ul,section{
 }
 section li{
     width: 100%;
-    background-color: #fafafa;
-    margin-bottom: 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
     position: relative;
+    border-bottom: 12px solid #fff;
+    background: #FAFAFA;
+}
+a:hover{
+    text-decoration: none;
 }
 section li h1{
     font-weight: 600;
@@ -86,9 +95,10 @@ section li .xbg1{
 .word .right{
     display: inline-block;
 }
-list ul{
+list ul,list{
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 list li{
     float: left;
@@ -106,7 +116,138 @@ list li h2,list li h3{
     font-weight: normal;
     text-align: center;
 }
+.foot{
+    width: 100%;
+    background: #f2f2f2;
+}
+.foot ul{
+    height: auto;
+}
+.foot ul li{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.foot ul li span{
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 29px; 
+    text-align: left;
+    color: rgb(85, 85, 85);
+}
+footer{
+    width: 100%;
+    background: #F2F2F2;
+}
+footer .top{
+    height: 30px;
+    border-bottom: 1px solid #d6d6d6;
+}
+footer .top .word1{
+    width: 100%;
+    height: 15px;
+    padding-bottom: 15px;
+    font-size: 11px;
+    color: #888;
+}
+footer .top .word1 a{
+    color: #0070c9;
+}
+footer .medium{
+    height: 29px;
+    font-size: 11px;
+    font-weight: normal;
+}
+footer .medium .left{
+    float: left;
+}
+footer .medium .center{
+    float: left;
+    margin-left: 15px;
+}
+footer .medium .center span a{
+    height: 18px;
+    line-height: 18px;
+    display: block;
+    float: left;
+    padding:0 13px;
+    color: #555;
+    border-right: 1px solid #d6d6d6;
+}
+footer .medium .center span:last-child{
+    border-right: none;
+}
+footer .medium .right{
+    float: right;
+}
+footer .bottom{
+    padding-bottom: 20px;
+    font-size: 11px;
+    color: #999;
+    font-weight: normal;
+}
 
+footer ul{
+    width: 100%;
+    margin: 0 auto 24px;
+}
+footer ul li{
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 13px;
+    color: #333;
+    line-height: 46px;
+}
+.min1 ul li a{
+    width: 13px;
+    height: 13px;
+    display: block;
+    float: right;
+    font-size: 13px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.min1 .word1{
+    width: 100%;
+    font-size: 10px;
+    color: #A6A6A6;
+    margin-bottom: 9px;
+}
+.min1 .word1 a{
+    color: #0070C9;
+}
+.first{
+    font-size: 10px;
+    color: #999;
+    margin-top: 22px;
+}
+.sec span{
+    height: 18px;
+    border-right: 1px solid #D6D6D6;
+    font-size: 10px;
+    line-height: 18px;
+    padding: 0 5px;
+}
+.sec span:first-child{
+    padding-left: 0;
+}
+.sec span:last-child{
+    border-right: none;
+}
+.sec a{
+    color: #555;
+}
+.thr{
+    font-size: 10px;
+    line-height: 20px;
+    color: #c4c4c4;
+}
+.bl{
+
+}
+/* >1024 */
 @media screen and (min-width:1024px){
     header main{
         width: 976px;
@@ -114,10 +255,10 @@ list li h2,list li h3{
     nav ul{
         width: 976px;
     }
-    .max{
+    .max,.max1{
         display: block;
     }
-    .min{
+    .min,.min1{
         display: none;
     }
     section li{
@@ -152,6 +293,7 @@ list li h2,list li h3{
         border-left: 12px solid #fff;
         border-right: 6px solid #fff;
         background: url("../img/iphone_x_a11_large.jpg" ) no-repeat center;
+        background-size: 100% 100%;
     }
     list li:nth-child(2n){
         border-left: 6px solid #fff;
@@ -170,8 +312,23 @@ list li h2,list li h3{
         font-size: 18px;
         line-height: 28px;
     }
-
+    .foot{
+    height: 422px;
+    }
+    .foot ul{
+    width: 976px;
+    }
+    footer .top,footer .medium,footer .bottom{
+        width: 976px;
+    }
+    footer .top,footer .bottom,.foot ul{
+        margin: 0 auto;
+    }
+    footer .medium{
+        margin: 5px auto 0;
+    }
 }
+/* <1024 */
 @media screen and (max-width:1024px){
     header main{
         padding-right: 27px;
@@ -179,10 +336,10 @@ list li h2,list li h3{
      nav ul{
         padding:0 27px;
     }
-    .max{
+    .max,.min1{
         display: none;
     }
-    .min{
+    .min,.max1{
         display: block;
     }
     section li{
@@ -217,6 +374,7 @@ list li h2,list li h3{
         border-left: 12px solid #fff;
         border-right: 6px solid #fff;
         background: url("../img/iphone_x_a11_large.jpg" ) no-repeat center;
+        background-size: 100% 100%;
     }
     list li:nth-child(2n){
         border-left: 6px solid #fff;
@@ -235,12 +393,32 @@ list li h2,list li h3{
         font-size: 23px;
         line-height: 39px;
     }
-}
+    .foot{
+    height: 402px;
+    overflow: hidden;
+    }
+    .foot ul{
+    width: 100%;
+    padding: 0 25px;
+    }
+    footer{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 25px;
+    }
+    footer .top,footer .medium,footer .bottom{
+        width: 94%;
+    }
+    footer .medium{
+        margin-top: 5px;
+    }
+} 
+/* <768 */
 @media screen and (max-width:768px){
-    .max{
+    .max,.max1{
         display: none;
     }
-    .min{
+    .min,.min1{
         display: block;
     }
     section li{
@@ -276,6 +454,7 @@ list li h2,list li h3{
         border-left: none;
         border-right: none;
         background: url("../img/iphone_x_a11_large.jpg" ) no-repeat center;
+        background-size: 100% 100%;
     }
     list li:nth-child(2n){
         border-left: none;
@@ -294,4 +473,8 @@ list li h2,list li h3{
         font-size: 22px;
         line-height: 38px;
     }
+    footer{
+    width: 100%;
+    padding: 0 38px;
+}
 }
